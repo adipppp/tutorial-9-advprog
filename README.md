@@ -17,8 +17,7 @@ Disadvantages include increased complexity of the codebase, steep learning curve
 
 7. gRPC, implementing HTTP/2, is obviously more efficient than HTTP/1.1. It is also language-agnostic, enabling support for various projects written in different programming language. It also provides streaming service in addition to single request model.
 
-8. HTTP/2 allows multiplexing, where multiple requests and responses is included in a single TCP connection. Other than that, HTTP/2 uses header compression for small requests and responses to reduce overhead.
-<br>
+8. HTTP/2 allows multiplexing, where multiple requests and responses is included in a single TCP connection. Other than that, HTTP/2 uses header compression for small requests and responses to reduce overhead.<br>
 Disadvantages include complexity of the HTTP/1.1, making it more difficult to implement and debug. Another disadvantage include the inavailable support of HTTP/2 in older browsers and environments.
 
 9. Bidirectional communication in gRPC allows the client and the server to create a single connection that listens to a certain endpoint. This enables the server and the client to send data to each other, since both of them are listening to the same endpoint. Request/response model of REST API, on the other hand, uses 2 connections in total, the first for sending request from the client to the server, the second for sending response from the server to the client. Each connections are destroyed immediately after use, in constrast to bidirectional streaming.
