@@ -2,8 +2,10 @@
 
 ## Reflection
 1. In unary RPC, the client sends a single request to the server and receives a single response from the server at a time. This data transmission mechanism is most suitable for clients who only fetch certain data once in a while from the same endpoint. One use case for unary RPC is fetching static web page resources like CSS and JavaScript files.
+<br><br>
+In server-streaming RPC, the server uses a stream to continuously send data to the client. This mechanism is most suitable for clients who need to fetch data of large size or access to real-time data. One use case of server-streaming RPC is the media playback service that online streaming platforms provide.
 
-2. In server-streaming RPC, the server uses a stream to continuously send data to the client. This mechanism is most suitable for clients who need to fetch data of large size or access to real-time data. One use case of server-streaming RPC is the media playback service that online streaming platforms provide.
+2. Regarding authentication, we could use token-based authentication like JSON Web Tokens or mutual TLS authentication (mTLS) to verify the identity of the client that sends requests to a server. Regarding authorization, we could use OAuth2 to determine the client's access rights. Regarding data encryption, we could use TLS/SSL to encrypt the communication channel used for data transfer, securing it from malicious attacks like man-in-the-middle attacks
 
 3. There are some potential challenges in implementing bidirectional streaming, like ensuring the order of the received messages are the same as the sent messages, handling concurrency problems like race conditions, and ensuring that the bidirectional stream is secure.
 
